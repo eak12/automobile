@@ -1,0 +1,54 @@
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# What quantitative and Qualitative Characteristics Affect Normalized-Loses of Automobiles?
+
+## 1.0 Introduction
+
+I found the raw data from:
+
+- http://archive.ics.uci.edu/ml/datasets/Automobile
+
+- https://www.kaggle.com/toramky/automobile-dataset
+
+The producer of the raw data took this raw data from 1985 Ward's Automotive Yearbook.
+
+The prdoducer of the raw data took from:
+
+1. 1985 Model Import Car and Truck Specifications, 1985 Ward's Automotive Yearbook.
+2. Personal Auto Manuals, Insurance Services Office, 160 Water Street, New York, NY 10038
+3. Insurance Collision Report, Insurance Institute for Highway Safety, Watergate 600, Washington, DC 20037
+
+## 2.0 Synopsis
+
+I:
+
+1. Loaded the csv file.
+2. 
+
+## 3.0 Processing
+
+Here's the code
+```{r Load}
+#step 1 - create the working directory
+
+#setwd("C:/Users/Elias/Desktop/cars/cars")
+
+#file_car<- read.csv("car_evaluation.csv", header = FALSE, col.names = c('buying.price', 'maintaince.cost', 'number.doors', 'number.persons', 'lug.boot', 'safety', 'decision'))
+
+#file_car[1:10]
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

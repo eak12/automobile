@@ -34,11 +34,9 @@ I:
 
 Here's the code
 ```{r Load}
-#step 1 - create the working directory
+#step 1 - load the file "automobile.data.csv" and "?" with NA using na.string
 
-#setwd("C:/Users/Elias/Desktop/cars/cars")
-
-#file_car<- read.csv("car_evaluation.csv", header = FALSE, col.names = c('buying.price', 'maintaince.cost', 'number.doors', 'number.persons', 'lug.boot', 'safety', 'decision'))
+file_automobile<- read.csv("automobile.data.csv", na.strings = "?")
 
 #file_car[1:10]
 ```

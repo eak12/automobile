@@ -28,25 +28,41 @@ The prdoducer of the raw data took from:
 I:
 
 1. Loaded the csv file.
-2. 
+2. Found the percentage of NAs for the column 'normalized.losses'
 
 ## 3.0 Processing
 
-Here's the code
+Here's the code to find the percentage of NAs for the column 'normalised.loses'.
 ```{r Load}
 #step 1 - load the file "automobile.data.csv" and "?" with NA using na.string
 
 file_automobile<- read.csv("automobile.data.csv", na.strings = "?")
 
-#file_car[1:10]
+#step 2 - find the percentage of NAs for the column 'normalized.losses'
+
+na_mean<-(mean(is.na(file_automobile$normalized.losses)))*100
+
+#step 3 - find a subset of rows where in the column 'normalized.losses' is NA
+
+na.normalised.loses<-file_automobile[is.na(file_automobile$normalized.losses),]
 ```
 
-## Including Plots
+**`r na_mean`%** represents the percentage of missing or NAs for the column 'normalized.losses.'
 
-You can also embed plots, for example:
+Here's the code to find rows with NA values in the column 'normalized.losses' and plot a bar chart of the results.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+## 4.0 Result
+
+```{r pressure, echo=TRUE, fig.width=10}
+
+
+#step - produce a bar chart showing make of cars which are NA for the column normalized.losses
+par(mar=c(2,8,2,2))
+
+barplot(-table(na.normalised.loses$make), horiz = TRUE, axes=FALSE, las=2, main = "Make of Cars which are NA for the column normalized.losses")
+axis(1, at=-0:-8, labels=0:8)
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

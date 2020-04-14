@@ -34,15 +34,15 @@ I:
 
 Here's the code to find the percentage of NAs for the column 'normalised.loses'.
 ```{r Load}
-#step 1 - load the file "automobile.data.csv" and "?" with NA using na.string
+#step  - load the file "automobile.data.csv" and "?" with NA using na.string
 
 file_automobile<- read.csv("automobile.data.csv", na.strings = "?")
 
-#step 2 - find the percentage of NAs for the column 'normalized.losses'
+#step  - find the percentage of NAs for the column 'normalized.losses'
 
 na_mean<-(mean(is.na(file_automobile$normalized.losses)))*100
 
-#step 3 - find a subset of rows where in the column 'normalized.losses' is NA
+#step  - find a subset of rows where in the column 'normalized.losses' is NA
 
 na.normalised.loses<-file_automobile[is.na(file_automobile$normalized.losses),]
 ```
